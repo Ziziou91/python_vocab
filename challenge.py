@@ -19,6 +19,7 @@ def make_word_groups(words: list) -> str:
     return " :: ".join(result_list)
 
 def remove_suffix_ness(word: str) -> str:
+    """Take a word and remove the suffix 'ness'. Amends the end of the new string as required."""
     without_ness = word.removesuffix("ness")
 
     if without_ness[-1] == "i":
