@@ -26,3 +26,14 @@ def remove_suffix_ness(word: str) -> str:
         without_ness = without_ness[:-1] + "y" 
 
     return without_ness
+
+def adjective_to_verb(sentence: str, index: int) -> str:
+    """Takes a sentence and the index of a word. Function returns the extracted adjective as a verb."""
+    sentence_list = sentence.split(" ")
+    word = sentence_list[index]
+
+    # Remove punctuation.
+    for punctuation in ',.?;"-':
+        word = word.replace(punctuation, "")
+
+    return word + "en"
