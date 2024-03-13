@@ -17,3 +17,11 @@ def make_word_groups(words: list) -> str:
             result_list.append(f"{prefix}{word}")
 
     return " :: ".join(result_list)
+
+def remove_suffix_ness(word: str) -> str:
+    without_ness = word.removesuffix("ness")
+
+    if without_ness[-1] == "i":
+        without_ness = without_ness[:-1] + "y" 
+
+    return without_ness
